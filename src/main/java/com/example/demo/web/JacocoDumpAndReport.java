@@ -18,15 +18,19 @@ import java.io.IOException;
 @RequestMapping({"/jacoco"})
 public class JacocoDumpAndReport {
     //dump
-    private String address = "127.0.0.1";
+    private String address = "localhost";
     private int port = 8091;
     private boolean dump = true;
-    private File destFile = new File("C:/Users/57769/Desktop/jacoco/jacoco.exec");
+//    private File destFile = new File("C:/Users/57769/Desktop/jacoco/jacoco.exec");
+    private File destFile = new File("C:/Users/Administrator.USER-20190219YL/Desktop/jacoco/jacoco.exec");
     private boolean append = true;
     //report
-    private File sourceDirectory = new File("C:/Users/57769/IdeaProjects/jacoco_demo/src/main/java/");
-    private File classesDirectory = new File("D:/apache-tomcat-8.5.47/webapps/demo-0.0.1-SNAPSHOT/WEB-INF/classes/");
-    private File reportDirectory = new File("C:/Users/57769/Desktop/jacoco");
+//    private File sourceDirectory = new File("C:/Users/57769/IdeaProjects/jacoco_demo/src/main/java/");
+    private File sourceDirectory = new File("C:/Users/57769/IdeaProjects/jacoco_maven_demo/src/main/java/");
+//    private File classesDirectory = new File("D:/apache-tomcat-8.5.47/webapps/demo-0.0.1-SNAPSHOT/WEB-INF/classes/");
+    private File classesDirectory = new File("D:/tomcat8/b/webapps/demo-0.0.1-SNAPSHOT/WEB-INF/classes/");
+//    private File reportDirectory = new File("C:/Users/57769/Desktop/jacoco");
+    private File reportDirectory = new File("C:/Users/Administrator.USER-20190219YL/Desktop/jacoco");
     private String title = "demo";
 
     @RequestMapping(value={"/dump"}, method = RequestMethod.GET )
